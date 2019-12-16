@@ -10,33 +10,37 @@ ${BROWSER}            Chrome
 *** Test Cases ***
 Valid Login
     When          Open Browser on Onet page
-    Given         Sign In Properly
+    Given         Sign in Properly
     Then          Assert Onet Mail
     [Teardown]    Close Browser
 
 Invalid Login
     When          Open Browser on Onet page
-    Given         Sign it incorrectly
+    Given         Sign in incorrectly
     Then          Assert invalid
     [Teardown]    Close Browser
 
 *** Keywords ***
 Open Browser on Onet page
-    Open browser                   ${LOGIN URL}                ${BROWSER}
+    Open browser                   ${LOGIN URL}                 ${BROWSER}
     Title Should Be                Poczta Onet – zaloguj się
-    wait until element is visible  css=button.cmp-button_button.cmp-intro_acceptAll
+    Wait until element is visible  css=button.cmp-button_button.cmp-intro_acceptAll
     Click Element                  css=button.cmp-button_button.cmp-intro_acceptAll
-Sign In Properly
-    Input Text	                   id=mailFormLogin	           moje.prawidlowe.dane@onet.pl
-    Input Text                     id=mailFormPassword         Tojestjakieshaslo1
+
+Sign in Properly
+    Input Text	                   id=mailFormLogin	            moje.prawidlowe.dane@onet.pl
+    Input Text                     id=mailFormPassword          Tojestjakieshaslo1
     Click element                  css=.loginButton:nth-child(3)
+
 Assert Onet Mail
-    page should contain element    id=NewMail-button
-Sign it incorrectly
+    Page should contain element    id=NewMail-button
+
+Sign in incorrectly
     Input Text	                   id=mailFormLogin             blednylogin@onet.pl
     Input Text                     id=mailFormPassword          blednehaslo1
     Click element                  css=.loginButton:nth-child(3)
+
 Assert invalid
-    wait until element is visible   class=messageContent
-    get text                        class=messageContent
+    Wait until element is visible   class=messageContent
+    Get text                        class=messageContent
     Should Contain Any	            ${list}

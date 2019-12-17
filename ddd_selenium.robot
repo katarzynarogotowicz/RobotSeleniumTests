@@ -1,5 +1,5 @@
 *** Settings ***
-Library  Selenium2Library
+Library        Selenium2Library
 Documentation  Test written in DDD style - one test with several sets of arguments.
 Test Template  Seleniumtemplate Text
 

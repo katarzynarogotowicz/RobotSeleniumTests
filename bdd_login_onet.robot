@@ -1,5 +1,5 @@
 *** Settings ***
-Library  Selenium2Library
+Library               Selenium2Library
 Documentation         Test written in BDD style. Test to verify logins in onet website.
 
 *** Variables ***

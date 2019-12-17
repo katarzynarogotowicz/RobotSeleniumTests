@@ -1,5 +1,5 @@
 *** Settings ***
-Library  Selenium2Library
+Library        Selenium2Library
 Documentation  Test written in KDD style - one test web page.
 
 *** Variables ***

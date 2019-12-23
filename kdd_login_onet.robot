@@ -54,5 +54,5 @@ Input invalid password
 
 Assert invalid
     Wait until element is visible   class=messageContent
-    Get text                        class=messageContent
-    Should Contain Any	    ${list}	Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.
+    ${list}  Get text               class=messageContent
+    Should Contain Any	  ${list}   Niepoprawny e-mail lub hasło.   Wprowadź poprawne dane.

@@ -12,7 +12,7 @@ Valid Login
     Rodo
     Input Username
     Input Password
-    Login button
+    Login Button
     Assert Onet Mail
     [Teardown]    Close Browser
 

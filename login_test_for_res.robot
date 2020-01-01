@@ -1,6 +1,6 @@
 *** Settings ***
 Resource          ./login_resource.robot
-Documentation     Test written for login test resourse. Test to verify valid logins in onet and wp website.
+Documentation     Test written with login test resource usage. Verification of valid logins in onet and wp website.
 
 *** Variables ***
 ${onet URL}          http://www.poczta.onet.pl/

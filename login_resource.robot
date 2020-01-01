@@ -1,13 +1,13 @@
 *** Settings ***
 Library  Selenium2Library
-Documentation     There is resourse for login_test_for_res.robot. Test to verify valid logins in onet and wp website.
+Documentation     The resourse for login_test_for_res.robot. Test to verify valid logins in onet and wp website.
 
 *** Variables ***
 
 *** Keywords ***
 Open main page
     [Arguments]        ${login url}   ${title}
-    Open browser       ${login url}   gc
+    Open Browser       ${login url}   gc
     Title Should Be    ${title}
 
 Rodo
@@ -15,12 +15,12 @@ Rodo
     Click Element                  css=button.cmp-button_button.cmp-intro_acceptAll
 
 Input Username
-    [Arguments]   ${username}   ${dane}
-    Input Text	  ${username}   ${dane}
+    [Arguments]   ${username}   ${username_data}
+    Input Text	  ${username}   ${username_data}
 
 Input password
-    [Arguments]   ${password}   ${pass}
-    Input Text    ${password}   ${pass}
+    [Arguments]   ${password}   ${password_data}
+    Input Text    ${password}   ${password_data}
 
 Login button
     [Arguments]    ${button}

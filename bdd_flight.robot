@@ -1,7 +1,8 @@
 *** Settings ***
 Library               Selenium2Library
 Documentation         Test written in BDD style. The user can book available flights
-
+Library        SeleniumLibrary
+Documentation  Test written in BDD style. The user can find a flight from Paris to London
 
 *** Variables ***
 ${URL}                http://blazedemo.com/

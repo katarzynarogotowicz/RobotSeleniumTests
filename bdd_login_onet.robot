@@ -9,15 +9,15 @@ ${BROWSER}            Chrome
 
 *** Test Cases ***
 Valid Login
-    When          Open Browser on Onet page
-    Given         Sign in Properly
-    Then          Assert Onet Mail
+    When Open Browser on Onet page
+    Given Sign in Properly
+    Then Assert Onet Mail
     [Teardown]    Close Browser
 
 Invalid Login
-    When          Open Browser on Onet page
-    Given         Sign in incorrectly
-    Then          Assert invalid
+    When Open Browser on Onet page
+    Given Sign in incorrectly
+    Then Assert invalid
     [Teardown]    Close Browser
 
 *** Keywords ***

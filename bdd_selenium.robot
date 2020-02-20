@@ -9,9 +9,9 @@ ${article}    Robot Framework
 
 *** Test Cases ***
 Test Selenium
-  When        Open Browser on Wikipedia page
-  Given       Fill search box with expected phrase
-  Then        I would like to see ${article} article
+  When Open Browser on Wikipedia page
+  Given Fill search box with expected phrase
+  Then I would like to see ${article} article
   [Teardown]  Close Browser
 
 *** Keywords ***
